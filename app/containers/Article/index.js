@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Form, Item, Content } from 'native-base';
+import { Container, Form, Item } from 'native-base';
 import SearchBox from '../../components/Article/SearchBox';
 
 type Props = {};
@@ -33,18 +33,16 @@ export default class Article extends Component<Props, State> {
     const { searchValue } = this.state;
     return (
       <Container>
-        <Content>
-          <Form>
-            <Item>
-              <SearchBox
-                value={searchValue}
-                onChangeText={this.onChangeSearchValue.bind(this)}
-                onValueChange={this.onChangeSortValue.bind(this)} />
-            </Item>
-          </Form>
-          <Container>
-          </Container>
-        </Content>
+        <Form>
+          <Item>
+            <SearchBox
+              value={searchValue}
+              onChangeText={this.onChangeSearchValue.bind(this)}
+              onValueChange={this.onChangeSortValue.bind(this)} />
+          </Item>
+        </Form>
+        <Container>
+        </Container>
       </Container>
     );
   }
