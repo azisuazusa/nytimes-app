@@ -10,4 +10,9 @@ const bookList = [
   { label: "Hardcover Fiction", value: "hardcover-fiction" }
 ];
 
-export default { sortArticle, bookList };
+const apiKey = 'e09f4fa769a64eb78a7d247ac86b0903';
+const baseUrl = 'https://api.nytimes.com/svc/';
+const articleUrl = 'search/v2/articlesearch.json';
+const bookUrl = 'books/v3/lists.json';
+
+export default { sortArticle, bookList, apiKey, baseUrl, articleUrl, bookUrl };
