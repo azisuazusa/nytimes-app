@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container } from 'native-base';
+import { Container, Content } from 'native-base';
 import SegmentHeader from '../../components/Home/SegmentHeader';
 import Article from '../Article';
 import Book from '../Book';
@@ -33,9 +33,9 @@ export default class Home extends Component<Props, State> {
           active={active}
           onPressArticle={() => this.onPressSegment(0)}
           onPressBook={() => this.onPressSegment(1)} />
-
-        {(active == 0) ? <Article /> : <Book />}
-
+        <Content>
+          {(active == 0) ? <Article /> : <Book />}
+        </Content>
       </Container>
     );
   }
