@@ -12,6 +12,7 @@ import { NavigationScreenProp, NavigationState } from 'react-navigation';
 type Props = {
   navigation: NavigationScreenProp<NavigationState>
 };
+
 type State = {
   active: number
 };
@@ -30,14 +31,15 @@ export default class Home extends Component<Props, State> {
 
   render() {
     const { active } = this.state;
+    const { navigation } = this.props;
     return (
       <Container>
         <SegmentHeader
           active={active}
           onPressArticle={() => this.onPressSegment(0)}
           onPressBook={() => this.onPressSegment(1)} />
-          {(active == 0) && <Article navigation={this.props.navigation} />}
-          {(active == 1) && <Book />}
+          {(active == 0) && <Article navigation={navigation} />}
+          {(active == 1) && <Book navigation={navigation}/>}
       </Container>
     );
   }

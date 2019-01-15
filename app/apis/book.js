@@ -6,8 +6,11 @@ import axios from 'axios';
 
 const api = axios.create({ baseURL: constants.baseUrl });
 
-const getBooks = (list: string) : Promise<Array<any>> => {
+const getBooks = (list: string) : Promise<any> => {
   let params = {};
-  if (list != '') params.list = list;
+  params.list = list;
+  params['api-key'] = constants.apiKey;
   return api.get(constants.bookUrl, { params });
 }
+
+export default { getBooks };

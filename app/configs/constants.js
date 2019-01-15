@@ -5,7 +5,6 @@ const sortArticle = [
 ];
 
 const bookList = [
-  { label: "Search by...", value: "" },
   { label: "E-Book Fiction", value: "e-book-fiction" },
   { label: "Hardcover Fiction", value: "hardcover-fiction" }
 ];
