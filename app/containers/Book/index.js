@@ -10,6 +10,7 @@ import BookItem from '../../components/Book/BookItem';
 import constants from '../../configs/constants';
 import bookApi from '../../apis/book';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
+import moment from 'moment';
 
 type Props = {
   navigation: NavigationScreenProp<NavigationState>
@@ -62,12 +63,13 @@ export default class Book extends Component<Props, State> {
   renderBookItem(book: any) {
     if (book.book_details.length == 0) return null;
     const { title, description, author } = book.book_details[0];
+    const publishedDate = moment(book.published_date);
     return (
       <BookItem
         title={title}
         description={description}
         author={author}
-        publishedDate={book.published_date}
+        publishedDate={publishedDate.format("dddd, MMMM Do YYYY")}
         productUrl={book.amazon_product_url}
         onPress={this.onPressBook.bind(this)} />
     );

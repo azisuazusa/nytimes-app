@@ -10,6 +10,7 @@ import SearchBox from '../../components/Article/SearchBox';
 import ArticleItem from '../../components/Article/ArticleItem';
 import articleApi from '../../apis/article';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
+import moment from 'moment';
 
 type Props = {
   navigation: NavigationScreenProp<NavigationState>
@@ -75,6 +76,7 @@ export default class Article extends Component<Props, State> {
       bylineOriginal = article.byline.original;
     }
     const headline = article.headline.main.replace('; ', '\n');
+    const pubDate = moment(article.pub_date);
     return (
       <ArticleItem
         typeOfMaterial={article.type_of_material}
@@ -83,7 +85,7 @@ export default class Article extends Component<Props, State> {
         webUrl={article.web_url}
         onPress={this.onPressArticle.bind(this)}
         bylineOriginal={bylineOriginal}
-        pubDate={article.pub_date} />
+        pubDate={pubDate.format('dddd, MMMM Do YYYY')} />
     );
   }
 
