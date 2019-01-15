@@ -8,26 +8,28 @@ import CommonPicker from '../../Common/CommonPicker';
 import constants from '../../../configs/constants';
 
 type Props = {
-  value: string,
+  textValue: string,
+  pickerValue: string,
   onValueChange: (value: string) => void,
   onChangeText: (value: string) => void
 };
 
 export default class SearchBox extends Component<Props> {
   render() {
-    const { value, onValueChange, onChangeText } = this.props;
+    const { textValue, pickerValue, onValueChange, onChangeText } = this.props;
     return (
       <Grid>
         <Col>
           <Input
             placeholder="Search..."
+            value={textValue}
             onChangeText={onChangeText} />
         </Col>
         <Col>
           <CommonPicker
             data={constants.sortArticle}
             onValueChange={onValueChange}
-            value={value} />
+            value={pickerValue} />
         </Col>
       </Grid>
     );
