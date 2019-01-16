@@ -4,8 +4,6 @@ import MyWebView from '../MyWebView';
 
 it('MyWebView renders correctly', () => {
   const navigation = { getParam: jest.fn() };
-  const tree = renderer.create(
-    <MyWebView navigation={navigation} />
-  ).toJSON();
+  const tree = renderer.create(<MyWebView navigation={navigation} />).toJSON();
   expect(tree).toMatchSnapshot();
 });
