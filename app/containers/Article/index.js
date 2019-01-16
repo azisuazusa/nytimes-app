@@ -4,7 +4,7 @@
 
 import React, { Component } from 'react';
 import type { Node } from 'react';
-import { Container, Form, Item, Spinner, Text } from 'native-base';
+import { Container, Form, Item, Text } from 'native-base';
 import { FlatList, ScrollView } from 'react-native';
 import SearchBox from '../../components/Article/SearchBox';
 import ArticleItem from '../../components/Article/ArticleItem';
@@ -41,9 +41,10 @@ export default class Article extends Component<Props, State> {
   }
 
   getArticles(loadMore: boolean = false) {
+    this.setState({ isLoading: true });
     const { searchValue, sortValue, page, articles } = this.state;
-    let newPage = page;
-    if (loadMore) newPage++;
+    let newPage = 0;
+    if (loadMore) newPage = page + 1;
     articleApi.getArticles(searchValue, sortValue, newPage)
       .then(result => {
         let newArticles = result.data.response.docs;
@@ -61,11 +62,11 @@ export default class Article extends Component<Props, State> {
   }
 
   onChangeSearchValue(searchValue: string) {
-    this.setState({ searchValue, isLoading: true }, this.getArticles);
+    this.setState({ searchValue }, this.getArticles);
   }
 
   onChangeSortValue(sortValue: string) {
-    this.setState({ sortValue, isLoading: true }, this.getArticles);
+    this.setState({ sortValue }, this.getArticles);
   }
 
   onPressArticle(webUrl: string) {
@@ -109,16 +110,13 @@ export default class Article extends Component<Props, State> {
               onValueChange={this.onChangeSortValue.bind(this)} />
           </Item>
         </Form>
-        { isLoading && <Spinner /> }
-        { !isLoading
-            && articles.length > 0
-            && <FlatList
-                data={articles}
-                keyExtractor={(item) => item._id}
-                onEndReached={this.getArticles.bind(this, true)}
-                renderItem={({item}) => this.renderArticleItem(item)}
-                ListFooterComponent={() => <Spinner />}/>
-        }
+        <FlatList
+          data={articles}
+          onRefresh={this.getArticles.bind(this)}
+          refreshing={isLoading}
+          keyExtractor={(item) => item._id}
+          onEndReached={this.getArticles.bind(this, true)}
+          renderItem={({item}) => this.renderArticleItem(item)} />
       </Container>
     );
   }

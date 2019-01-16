@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Form, Item, Spinner } from 'native-base';
+import { Container, Form, Item } from 'native-base';
 import { FlatList } from 'react-native';
 import CommonPicker from '../../components/Common/CommonPicker';
 import BookItem from '../../components/Book/BookItem';
@@ -19,7 +19,9 @@ type Props = {
 type State = {
   searchListValue: string,
   books: Array<any>,
-  isLoading: boolean 
+  isLoading: boolean,
+  offset: number,
+  page: number
 };
 
 export default class Book extends Component<Props, State> {
@@ -28,7 +30,9 @@ export default class Book extends Component<Props, State> {
     this.state = {
       searchListValue: 'e-book-fiction',
       books: [],
-      isLoading: true
+      isLoading: true,
+      offset: 0,
+      page: 1
     }
   }
 
@@ -36,12 +40,24 @@ export default class Book extends Component<Props, State> {
     this.getBooks();
   }
 
-  getBooks() {
-    const { searchListValue } = this.state;
-    bookApi.getBooks(searchListValue)
+  getBooks(loadMore: boolean = false) {
+    const { searchListValue, offset, books, page } = this.state;
+    let newOffset = 0;
+    let newPage = 1;
+    let newLoadMore = loadMore && books.length == page * 20; 
+    if (newLoadMore) {
+      this.setState({ isLoading: true });
+      newOffset = offset + 20;
+      newPage = page + 1;
+    }
+    bookApi.getBooks(searchListValue, newOffset)
       .then(result => {
+        let newBooks = result.data.results;
+        if (newLoadMore) newBooks = books.concat(result.data.results); 
         this.setState({
-          books: result.data.results,
+          books: newBooks,
+          offset: newOffset,
+          page: newPage,
           isLoading: false
         });
       })
@@ -52,7 +68,7 @@ export default class Book extends Component<Props, State> {
   }
 
   onValueSearchListChange(searchListValue: string) {
-    this.setState({ searchListValue, isLoading: true }, this.getBooks);
+    this.setState({ searchListValue }, this.getBooks);
   }
 
   onPressBook(webUrl: string) {
@@ -87,14 +103,13 @@ export default class Book extends Component<Props, State> {
               value={searchListValue} />
           </Item>
         </Form>
-        { isLoading && <Spinner /> }
-        { !isLoading
-          && books.length > 0
-          && <FlatList
-              data={books}
-              keyExtractor={(item, index) => index.toString()}
-              renderItem={({item}) => this.renderBookItem(item)} />
-        }
+        <FlatList
+          data={books}
+          refreshing={isLoading}
+          onRefresh={this.getBooks.bind(this)}
+          onEndReached={this.getBooks.bind(this, true)}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={({item}) => this.renderBookItem(item)} />
       </Container>
     );
   }
