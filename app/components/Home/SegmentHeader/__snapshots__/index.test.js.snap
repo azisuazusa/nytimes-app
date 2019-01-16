@@ -1,0 +1,793 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SegmentHeader renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SegmentHeader
+    active={0}
+    onPressArticle={[Function]}
+    onPressBook={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Styled(Left) />,
+        <Styled(Body)>
+          <Styled(Segment)>
+            <Styled(Button)
+              active={true}
+              first={true}
+              onPress={[Function]}
+            >
+              <Styled(Text)>
+                Articles
+              </Styled(Text)>
+            </Styled(Button)>
+            <Styled(Button)
+              active={false}
+              last={true}
+              onPress={[Function]}
+            >
+              <Styled(Text)>
+                Books
+              </Styled(Text)>
+            </Styled(Button)>
+          </Styled(Segment)>
+        </Styled(Body)>,
+        <Styled(Right) />,
+      ],
+      "hasSegment": true,
+      "virtual": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "virtual": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Styled(Segment)>
+            <Styled(Button)
+              active={true}
+              first={true}
+              onPress={[Function]}
+            >
+              <Styled(Text)>
+                Articles
+              </Styled(Text)>
+            </Styled(Button)>
+            <Styled(Button)
+              active={false}
+              last={true}
+              onPress={[Function]}
+            >
+              <Styled(Text)>
+                Books
+              </Styled(Text)>
+            </Styled(Button)>
+          </Styled(Segment)>,
+          "virtual": undefined,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Styled(Button)
+                active={true}
+                first={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Articles
+                </Styled(Text)>
+              </Styled(Button)>,
+              <Styled(Button)
+                active={false}
+                last={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Books
+                </Styled(Text)>
+              </Styled(Button)>,
+            ],
+            "virtual": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "active": true,
+                "children": <Styled(Text)>
+                  Articles
+                </Styled(Text)>,
+                "first": true,
+                "onPress": [Function],
+                "virtual": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Articles",
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": "Articles",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "active": false,
+                "children": <Styled(Text)>
+                  Books
+                </Styled(Text)>,
+                "last": true,
+                "onPress": [Function],
+                "virtual": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Books",
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": "Books",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "virtual": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Styled(Left) />,
+          <Styled(Body)>
+            <Styled(Segment)>
+              <Styled(Button)
+                active={true}
+                first={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Articles
+                </Styled(Text)>
+              </Styled(Button)>
+              <Styled(Button)
+                active={false}
+                last={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Books
+                </Styled(Text)>
+              </Styled(Button)>
+            </Styled(Segment)>
+          </Styled(Body)>,
+          <Styled(Right) />,
+        ],
+        "hasSegment": true,
+        "virtual": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "virtual": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Styled(Segment)>
+              <Styled(Button)
+                active={true}
+                first={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Articles
+                </Styled(Text)>
+              </Styled(Button)>
+              <Styled(Button)
+                active={false}
+                last={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Books
+                </Styled(Text)>
+              </Styled(Button)>
+            </Styled(Segment)>,
+            "virtual": undefined,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Styled(Button)
+                  active={true}
+                  first={true}
+                  onPress={[Function]}
+                >
+                  <Styled(Text)>
+                    Articles
+                  </Styled(Text)>
+                </Styled(Button)>,
+                <Styled(Button)
+                  active={false}
+                  last={true}
+                  onPress={[Function]}
+                >
+                  <Styled(Text)>
+                    Books
+                  </Styled(Text)>
+                </Styled(Button)>,
+              ],
+              "virtual": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "active": true,
+                  "children": <Styled(Text)>
+                    Articles
+                  </Styled(Text)>,
+                  "first": true,
+                  "onPress": [Function],
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Articles",
+                    "virtual": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Articles",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "active": false,
+                  "children": <Styled(Text)>
+                    Books
+                  </Styled(Text)>,
+                  "last": true,
+                  "onPress": [Function],
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Books",
+                    "virtual": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Books",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "virtual": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`SegmentHeader renders correctly 2`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SegmentHeader
+    active={1}
+    onPressArticle={[Function]}
+    onPressBook={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Styled(Left) />,
+        <Styled(Body)>
+          <Styled(Segment)>
+            <Styled(Button)
+              active={false}
+              first={true}
+              onPress={[Function]}
+            >
+              <Styled(Text)>
+                Articles
+              </Styled(Text)>
+            </Styled(Button)>
+            <Styled(Button)
+              active={true}
+              last={true}
+              onPress={[Function]}
+            >
+              <Styled(Text)>
+                Books
+              </Styled(Text)>
+            </Styled(Button)>
+          </Styled(Segment)>
+        </Styled(Body)>,
+        <Styled(Right) />,
+      ],
+      "hasSegment": true,
+      "virtual": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "virtual": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Styled(Segment)>
+            <Styled(Button)
+              active={false}
+              first={true}
+              onPress={[Function]}
+            >
+              <Styled(Text)>
+                Articles
+              </Styled(Text)>
+            </Styled(Button)>
+            <Styled(Button)
+              active={true}
+              last={true}
+              onPress={[Function]}
+            >
+              <Styled(Text)>
+                Books
+              </Styled(Text)>
+            </Styled(Button)>
+          </Styled(Segment)>,
+          "virtual": undefined,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Styled(Button)
+                active={false}
+                first={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Articles
+                </Styled(Text)>
+              </Styled(Button)>,
+              <Styled(Button)
+                active={true}
+                last={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Books
+                </Styled(Text)>
+              </Styled(Button)>,
+            ],
+            "virtual": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "active": false,
+                "children": <Styled(Text)>
+                  Articles
+                </Styled(Text)>,
+                "first": true,
+                "onPress": [Function],
+                "virtual": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Articles",
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": "Articles",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "active": true,
+                "children": <Styled(Text)>
+                  Books
+                </Styled(Text)>,
+                "last": true,
+                "onPress": [Function],
+                "virtual": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Books",
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": "Books",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "virtual": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Styled(Left) />,
+          <Styled(Body)>
+            <Styled(Segment)>
+              <Styled(Button)
+                active={false}
+                first={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Articles
+                </Styled(Text)>
+              </Styled(Button)>
+              <Styled(Button)
+                active={true}
+                last={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Books
+                </Styled(Text)>
+              </Styled(Button)>
+            </Styled(Segment)>
+          </Styled(Body)>,
+          <Styled(Right) />,
+        ],
+        "hasSegment": true,
+        "virtual": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "virtual": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Styled(Segment)>
+              <Styled(Button)
+                active={false}
+                first={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Articles
+                </Styled(Text)>
+              </Styled(Button)>
+              <Styled(Button)
+                active={true}
+                last={true}
+                onPress={[Function]}
+              >
+                <Styled(Text)>
+                  Books
+                </Styled(Text)>
+              </Styled(Button)>
+            </Styled(Segment)>,
+            "virtual": undefined,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Styled(Button)
+                  active={false}
+                  first={true}
+                  onPress={[Function]}
+                >
+                  <Styled(Text)>
+                    Articles
+                  </Styled(Text)>
+                </Styled(Button)>,
+                <Styled(Button)
+                  active={true}
+                  last={true}
+                  onPress={[Function]}
+                >
+                  <Styled(Text)>
+                    Books
+                  </Styled(Text)>
+                </Styled(Button)>,
+              ],
+              "virtual": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "active": false,
+                  "children": <Styled(Text)>
+                    Articles
+                  </Styled(Text)>,
+                  "first": true,
+                  "onPress": [Function],
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Articles",
+                    "virtual": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Articles",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "active": true,
+                  "children": <Styled(Text)>
+                    Books
+                  </Styled(Text)>,
+                  "last": true,
+                  "onPress": [Function],
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Books",
+                    "virtual": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Books",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "virtual": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
