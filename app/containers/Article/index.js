@@ -20,7 +20,8 @@ type State = {
   searchValue: string,
   sortValue: string,
   isLoading: boolean,
-  articles: Array<any>
+  articles: Array<any>,
+  page: number
 };
 
 export default class Article extends Component<Props, State> {
@@ -30,7 +31,8 @@ export default class Article extends Component<Props, State> {
       searchValue: '',
       sortValue: '',
       isLoading: true,
-      articles: []
+      articles: [],
+      page: 0
     }
   }
 
@@ -38,12 +40,17 @@ export default class Article extends Component<Props, State> {
     this.getArticles();
   }
 
-  getArticles() {
-    const { searchValue, sortValue } = this.state;
-    articleApi.getArticles(searchValue, sortValue)
+  getArticles(loadMore: boolean = false) {
+    const { searchValue, sortValue, page, articles } = this.state;
+    let newPage = page;
+    if (loadMore) newPage++;
+    articleApi.getArticles(searchValue, sortValue, newPage)
       .then(result => {
+        let newArticles = result.data.response.docs;
+        if (loadMore) newArticles = articles.concat(result.data.response.docs);
         this.setState({
-          articles: result.data.response.docs,
+          articles: newArticles,
+          page: newPage,
           isLoading: false
         });
       })
@@ -108,7 +115,9 @@ export default class Article extends Component<Props, State> {
             && <FlatList
                 data={articles}
                 keyExtractor={(item) => item._id}
-                renderItem={({item}) => this.renderArticleItem(item)} />
+                onEndReached={this.getArticles.bind(this, true)}
+                renderItem={({item}) => this.renderArticleItem(item)}
+                ListFooterComponent={() => <Spinner />}/>
         }
       </Container>
     );
