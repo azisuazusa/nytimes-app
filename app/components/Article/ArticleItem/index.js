@@ -4,6 +4,8 @@
 import React, { Component } from 'react';
 import { Card, CardItem, Body, Text, Grid, Col, Row } from 'native-base';
 import { Image, TouchableOpacity } from 'react-native';
+import constants from '../../../configs/constants';
+import styles from './styles';
 
 type Props = {
   typeOfMaterial: string,
@@ -36,8 +38,15 @@ export default class ArticleItem extends Component<Props> {
           <CardItem>
             <Body>
               <Grid>
-                <Col><Text>{headline}</Text></Col>
-                { image.length > 0 && <Col><Image source={{ uri: image }} /></Col> }
+                <Col size={3}><Text>{headline}</Text></Col>
+                { 
+                  image.length > 0
+                  && <Col size={1}>
+                      <Image 
+                        style={styles.imageSize}
+                        source={{ uri: constants.webBaseUrl + image }} />
+                     </Col>
+                }
               </Grid>
             </Body>
           </CardItem>
