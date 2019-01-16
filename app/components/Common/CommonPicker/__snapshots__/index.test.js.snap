@@ -1,0 +1,460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there are no items 1`] = `
+<View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": null,
+        "borderBottomWidth": null,
+        "borderColor": "#007aff",
+        "borderLeftWidth": null,
+        "borderRadius": 5,
+        "borderRightWidth": null,
+        "borderTopWidth": null,
+        "borderWidth": undefined,
+        "elevation": 0,
+        "flexDirection": "row",
+        "height": 45,
+        "justifyContent": "space-between",
+        "opacity": 1,
+        "paddingBottom": 6,
+        "paddingTop": 6,
+        "shadowColor": null,
+        "shadowOffset": null,
+        "shadowOpacity": null,
+        "shadowRadius": null,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "fontFamily": "System",
+          "fontSize": 16.5,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        }
+      }
+      uppercase={false}
+    >
+      E-Book Fiction
+    </Text>
+  </View>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    transparent={false}
+    visible={false}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "flex": 1,
+          "height": 1334,
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#F8F8F8",
+              "borderBottomColor": "#a7a6ab",
+              "borderBottomWidth": 0.5,
+              "elevation": 3,
+              "flexDirection": "row",
+              "height": 64,
+              "justifyContent": "center",
+              "left": 0,
+              "paddingLeft": 6,
+              "paddingRight": 10,
+              "paddingTop": 18,
+              "right": 0,
+              "shadowColor": undefined,
+              "shadowOffset": undefined,
+              "shadowOpacity": undefined,
+              "shadowRadius": undefined,
+              "top": 0,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "alignSelf": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": null,
+                  "backgroundColor": "transparent",
+                  "borderBottomWidth": null,
+                  "borderColor": null,
+                  "borderLeftWidth": null,
+                  "borderRadius": 5,
+                  "borderRightWidth": null,
+                  "borderTopWidth": null,
+                  "borderWidth": undefined,
+                  "elevation": 0,
+                  "flexDirection": "row",
+                  "height": 45,
+                  "justifyContent": "space-between",
+                  "marginLeft": 3,
+                  "opacity": 1,
+                  "paddingBottom": 6,
+                  "paddingLeft": 4,
+                  "paddingRight": 6,
+                  "paddingTop": 6,
+                  "shadowColor": null,
+                  "shadowOffset": null,
+                  "shadowOpacity": null,
+                  "shadowRadius": null,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "#007aff",
+                    "fontFamily": "System",
+                    "fontSize": 17,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "paddingLeft": 2,
+                    "paddingRight": undefined,
+                    "top": 1,
+                  }
+                }
+                uppercase={false}
+              >
+                Back
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "#000",
+                  "fontFamily": "System",
+                  "fontSize": 17,
+                  "fontWeight": "700",
+                  "marginLeft": undefined,
+                  "paddingLeft": 4,
+                  "paddingTop": 1,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Select One
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "alignSelf": "center",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
+              }
+            }
+          />
+        </View>
+      </View>
+      <RCTScrollView
+        data={
+          Array [
+            <Item
+              label="E-Book Fiction"
+              value="e-book-fiction"
+            />,
+            <Item
+              label="Hardcover Fiction"
+              value="hardcover-fiction"
+            />,
+          ]
+        }
+        disableVirtualization={false}
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={false}
+        initialNumToRender={10}
+        keyExtractor={[Function]}
+        maxToRenderPerBatch={10}
+        numColumns={1}
+        onContentSizeChange={[Function]}
+        onEndReachedThreshold={2}
+        onLayout={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        stickyHeaderIndices={Array []}
+        updateCellsBatchingPeriod={50}
+        viewabilityConfigCallbackPairs={Array []}
+        windowSize={21}
+      >
+        <View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={null}
+            >
+              <View
+                button={true}
+                onPress={[Function]}
+                selected={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "#c9c9c9",
+                    "flexDirection": "row",
+                    "marginLeft": 16,
+                    "paddingBottom": 13,
+                    "paddingRight": 16,
+                    "paddingTop": 13,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "color": "#007aff",
+                        "fontFamily": "System",
+                        "fontSize": 16,
+                      }
+                    }
+                    uppercase={false}
+                  >
+                    E-Book Fiction
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "alignSelf": "center",
+                      "flex": 0.28,
+                      "paddingBottom": null,
+                      "paddingLeft": null,
+                      "paddingRight": null,
+                      "paddingTop": null,
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    isTVSelectable={true}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignSelf": null,
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      style={
+                        Array [
+                          Object {
+                            "color": undefined,
+                            "fontSize": 12,
+                          },
+                          Object {
+                            "color": "#007aff",
+                            "fontSize": 25,
+                            "height": 20,
+                            "lineHeight": 25,
+                          },
+                          Object {
+                            "fontFamily": "Ionicons",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={null}
+            >
+              <View
+                button={true}
+                onPress={[Function]}
+                selected={false}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "#c9c9c9",
+                    "flexDirection": "row",
+                    "marginLeft": 16,
+                    "paddingBottom": 13,
+                    "paddingRight": 16,
+                    "paddingTop": 13,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "color": "#000",
+                        "fontFamily": "System",
+                        "fontSize": 16,
+                      }
+                    }
+                    uppercase={false}
+                  >
+                    Hardcover Fiction
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "alignSelf": "center",
+                      "flex": 0.28,
+                      "paddingBottom": null,
+                      "paddingLeft": null,
+                      "paddingRight": null,
+                      "paddingTop": null,
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    isTVSelectable={true}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignSelf": null,
+                        "opacity": 1,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </Modal>
+</View>
+`;
