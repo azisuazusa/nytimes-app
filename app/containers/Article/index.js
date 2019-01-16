@@ -74,23 +74,23 @@ export default class Article extends Component<Props, State> {
     navigate('MyWebView', { webUrl });
   }
 
-  renderArticleItem(article: any) {
+  renderArticleItem({ item }: any) {
     let image = '';
     let bylineOriginal = '';
-    if (article.multimedia.length > 0) {
-      image = article.multimedia[0].url;
+    if (item.multimedia.length > 0) {
+      image = item.multimedia[0].url;
     }
-    if (article.byline != undefined) {
-      bylineOriginal = article.byline.original;
+    if (item.byline != undefined) {
+      bylineOriginal = item.byline.original;
     }
-    const headline = article.headline.main.replace('; ', '\n');
-    const pubDate = moment(article.pub_date);
+    const headline = item.headline.main.replace('; ', '\n');
+    const pubDate = moment(item.pub_date);
     return (
       <ArticleItem
-        typeOfMaterial={article.type_of_material}
+        typeOfMaterial={item.type_of_material}
         headline={headline}
         image={image}
-        webUrl={article.web_url}
+        webUrl={item.web_url}
         onPress={this.onPressArticle.bind(this)}
         bylineOriginal={bylineOriginal}
         pubDate={pubDate.format('dddd, MMMM Do YYYY')} />
@@ -116,7 +116,7 @@ export default class Article extends Component<Props, State> {
           refreshing={isLoading}
           keyExtractor={(item) => item._id}
           onEndReached={this.getArticles.bind(this, true)}
-          renderItem={({item}) => this.renderArticleItem(item)} />
+          renderItem={this.renderArticleItem.bind(this)} />
       </Container>
     );
   }

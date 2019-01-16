@@ -76,17 +76,17 @@ export default class Book extends Component<Props, State> {
     navigate('MyWebView', { webUrl });
   }
 
-  renderBookItem(book: any) {
-    if (book.book_details.length == 0) return null;
-    const { title, description, author } = book.book_details[0];
-    const publishedDate = moment(book.published_date);
+  renderBookItem({ item }: any) {
+    if (item.book_details.length == 0) return null;
+    const { title, description, author } = item.book_details[0];
+    const publishedDate = moment(item.published_date);
     return (
       <BookItem
         title={title}
         description={description}
         author={author}
         publishedDate={publishedDate.format("dddd, MMMM Do YYYY")}
-        productUrl={book.amazon_product_url}
+        productUrl={item.amazon_product_url}
         onPress={this.onPressBook.bind(this)} />
     );
   }
@@ -109,7 +109,7 @@ export default class Book extends Component<Props, State> {
           onRefresh={this.getBooks.bind(this)}
           onEndReached={this.getBooks.bind(this, true)}
           keyExtractor={(item, index) => index.toString()}
-          renderItem={({item}) => this.renderBookItem(item)} />
+          renderItem={this.renderBookItem.bind(this)} />
       </Container>
     );
   }
