@@ -77,12 +77,8 @@ export default class Article extends Component<Props, State> {
   renderArticleItem({ item }: any) {
     let image = '';
     let bylineOriginal = '';
-    if (item.multimedia.length > 0) {
-      image = item.multimedia[0].url;
-    }
-    if (item.byline != undefined) {
-      bylineOriginal = item.byline.original;
-    }
+    if (item.multimedia.length > 0) image = item.multimedia[0].url;
+    if (item.byline != undefined) bylineOriginal = item.byline.original;
     const headline = item.headline.main.replace('; ', '\n');
     const pubDate = moment(item.pub_date);
     return (
